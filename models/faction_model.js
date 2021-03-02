@@ -9,7 +9,7 @@ const connection = require("./../database/conn_db")
 exports.getAll = () => {
     return connection.then((conn) => {
         return conn.query(`
-            SELECT F.name, numMembers, fname, lname
+            SELECT factionid, F.name, numMembers, fname, lname
             FROM FACTION F
                      INNER JOIN BEING B on B.beingid = F.leader
                      INNER JOIN PLANET P on B.homeworld = P.planetid;
@@ -21,7 +21,7 @@ exports.getAll = () => {
 exports.getOne = (id) => {
     return connection.then((conn) => {
         return conn.query(`
-                    SELECT F.name, numMembers, fname, lname
+                    SELECT factionid, F.name, numMembers, fname, lname
                     FROM FACTION F
                              INNER JOIN BEING B on B.beingid = F.leader
                              INNER JOIN PLANET P on B.homeworld = P.planetid

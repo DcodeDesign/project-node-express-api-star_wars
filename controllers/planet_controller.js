@@ -11,25 +11,25 @@ exports.getAll = (req, res) => {
 }
 
 exports.getOne = (req, res) => {
-    planetModel.getOne().then((datas) => {
+    planetModel.getOne(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.create = (req, res) => {
-    planetModel.create().then((datas) => {
+    planetModel.create(req.body).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.update = (req, res) => {
-    planetModel.update().then((datas) => {
+    planetModel.update(req.body, req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.delete = (req, res) => {
-    planetModel.delete().then((datas) => {
+    planetModel.delete(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }

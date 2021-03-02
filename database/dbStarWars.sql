@@ -193,28 +193,34 @@ DROP DATABASE Star_Wars;
 ###############
 # ALLEGIANCE
 ##############
-SELECT fname, lname, race,force_sensitive, name
+SELECT fname, lname, race, force_sensitive, name
 FROM ALLEGIANCE A
          INNER JOIN BEING B on A.beingid = B.beingid
          INNER JOIN FACTION F on A.factionid = F.factionid;
 
-SELECT fname, lname, race,force_sensitive, name
+SELECT fname, lname, race, force_sensitive, name
 FROM ALLEGIANCE A
          INNER JOIN BEING B on A.beingid = B.beingid
          INNER JOIN FACTION F on A.factionid = F.factionid
 WHERE allegianceid = 4;
 
-INSERT INTO ALLEGIANCE (beingid,factionid) VALUES (1,1);
+INSERT INTO ALLEGIANCE (beingid, factionid)
+VALUES (1, 1);
 
-UPDATE ALLEGIANCE SET beingid = 2, factionid = 2  WHERE allegianceid = 11;
+UPDATE ALLEGIANCE
+SET beingid   = 2,
+    factionid = 2
+WHERE allegianceid = 11;
 
-DELETE FROM ALLEGIANCE WHERE allegianceid = 11;
+DELETE
+FROM ALLEGIANCE
+WHERE allegianceid = 11;
 
 ###############
 # BEING
 ##############
 
-SELECT fname, lname, race, P.name, force_sensitive
+SELECT beingid, fname, lname, race, P.name, force_sensitive
 FROM BEING B
          INNER JOIN PLANET P on B.homeworld = P.planetid
 
@@ -227,8 +233,26 @@ WHERE beingid = 1;
 # FACTION
 ##############
 
-SELECT  F.name, numMembers, fname, lname
+SELECT factionid, F.name, numMembers, fname, lname
 FROM FACTION F
-    INNER JOIN BEING B on B.beingid = F.leader
-    INNER JOIN PLANET P on B.homeworld = P.planetid
+         INNER JOIN BEING B on B.beingid = F.leader
+         INNER JOIN PLANET P on B.homeworld = P.planetid
 ;
+
+###############
+# FORCE_USER
+##############
+
+SELECT forceuserid, name, lethal, fname, lname, race, homeworld, force_sensitive
+from FORCE_USER
+         INNER JOIN FORCE_POWER FP on FORCE_USER.forceid = FP.forceid
+         INNER JOIN BEING B on FORCE_USER.beingid = B.beingid;
+
+###############
+# PLANET
+##############
+
+SELECT planetid, PLANET.name, population,  F.name 'faction', numMembers,  fname 'leader'
+FROM PLANET
+INNER JOIN FACTION F on PLANET.owner = F.factionid
+INNER JOIN BEING B on F.leader = B.beingid

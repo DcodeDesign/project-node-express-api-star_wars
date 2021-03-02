@@ -9,7 +9,7 @@ const connection = require("./../database/conn_db")
 exports.getAll = () => {
     return connection.then((conn) => {
         return conn.query(`
-            SELECT fname, lname, race, P.name, force_sensitive
+            SELECT beingid, fname, lname, race, P.name, force_sensitive
             FROM BEING B
                      INNER JOIN PLANET P on B.homeworld = P.planetid
         `)
@@ -20,7 +20,7 @@ exports.getAll = () => {
 exports.getOne = (id) => {
     return connection.then((conn) => {
         return conn.query(`
-            SELECT fname, lname, race, P.name, force_sensitive
+            SELECT beingid, fname, lname, race, P.name, force_sensitive
             FROM BEING B
                      INNER JOIN PLANET P on B.homeworld = P.planetid
             WHERE beingid = ?;

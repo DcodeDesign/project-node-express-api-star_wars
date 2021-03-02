@@ -15,7 +15,7 @@ exports.getAll = () => {
 /** GET ONE */
 exports.getOne = (id) => {
     return connection.then((conn) => {
-        return conn.query("SELECT * FROM SHIP where id = ?", [id])
+        return conn.query("SELECT * FROM SHIP where shipid = ?", [id])
     })
 }
 
@@ -23,7 +23,11 @@ exports.getOne = (id) => {
 exports.create = (body) => {
     return connection.then((conn) => {
         return conn.query("INSERT INTO SHIP SET ?", {
-            body: body,
+            name: body.name,
+            model: body.model,
+            make: body.make,
+            captain: body.captain,
+            capacity: body.capacity,
         })
     })
 }
@@ -31,18 +35,23 @@ exports.create = (body) => {
 /** UPDATE */
 exports.update = (body, id) => {
     return connection.then((conn) => {
-        return conn.query("UPDATE SHIP FROM SET ? SHIP WHERE id = ?", [
+        return conn.query("UPDATE SHIP SET ? WHERE shipid = ?", [
             {
-                body: body,
+                name: body.name,
+                model: body.model,
+                make: body.make,
+                captain: body.captain,
+                capacity: body.capacity,
             }
-            , id])
+            , id
+        ])
     })
 }
 
 /** DELETE */
-exports.delete = (param) => {
+exports.delete = (id) => {
     return connection.then((conn) => {
-        return conn.query("DELETE FROM SHIP WHERE id = ?", [param])
+        return conn.query("DELETE FROM SHIP WHERE shipid = ?", id)
     })
 }
 

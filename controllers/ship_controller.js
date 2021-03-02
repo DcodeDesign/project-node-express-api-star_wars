@@ -11,25 +11,25 @@ exports.getAll = (req, res) => {
 }
 
 exports.getOne = (req, res) => {
-    shipModel.getOne().then((datas) => {
+    shipModel.getOne(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.create = (req, res) => {
-    shipModel.create().then((datas) => {
+    shipModel.create(req.body).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.update = (req, res) => {
-    shipModel.update().then((datas) => {
+    shipModel.update(req.body, req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.delete = (req, res) => {
-    shipModel.delete().then((datas) => {
+    shipModel.delete(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }

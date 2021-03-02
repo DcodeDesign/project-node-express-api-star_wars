@@ -11,25 +11,25 @@ exports.getAll = (req, res) => {
 }
 
 exports.getOne = (req, res) => {
-    forceUserModel.getOne().then((datas) => {
+    forceUserModel.getOne(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.create = (req, res) => {
-    forceUserModel.create().then((datas) => {
+    forceUserModel.create(req.body).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.update = (req, res) => {
-    forceUserModel.update().then((datas) => {
+    forceUserModel.update(req.body, req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.delete = (req, res) => {
-    forceUserModel.delete().then((datas) => {
+    forceUserModel.delete(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }

@@ -15,7 +15,7 @@ exports.getAll = () => {
 /** GET ONE */
 exports.getOne = (id) => {
     return connection.then((conn) => {
-        return conn.query("SELECT * FROM FORCE_POWER where id = ?", [id])
+        return conn.query("SELECT * FROM FORCE_POWER where forceid = ?", [id])
     })
 }
 
@@ -23,7 +23,8 @@ exports.getOne = (id) => {
 exports.create = (body) => {
     return connection.then((conn) => {
         return conn.query("INSERT INTO FORCE_POWER SET ?", {
-            body: body,
+            name: body.name,
+            lethal: body.lethal
         })
     })
 }
@@ -31,18 +32,20 @@ exports.create = (body) => {
 /** UPDATE */
 exports.update = (body, id) => {
     return connection.then((conn) => {
-        return conn.query("UPDATE FORCE_POWER FROM SET ? FORCE_POWER WHERE id = ?", [
+        return conn.query("UPDATE FORCE_POWER SET ? WHERE forceid = ?", [
             {
-                body: body,
+                name: body.name,
+                lethal: body.lethal
             }
-            , id])
+            , id
+        ])
     })
 }
 
 /** DELETE */
 exports.delete = (param) => {
     return connection.then((conn) => {
-        return conn.query("DELETE FROM FORCE_POWER WHERE id = ?", [param])
+        return conn.query("DELETE FROM FORCE_POWER WHERE forceid = ?", [param])
     })
 }
 

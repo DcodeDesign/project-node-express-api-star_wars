@@ -11,25 +11,25 @@ exports.getAll = (req, res) => {
 }
 
 exports.getOne = (req, res) => {
-    forcePowerModel.getOne().then((datas) => {
+    forcePowerModel.getOne(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.create = (req, res) => {
-    forcePowerModel.create().then((datas) => {
+    forcePowerModel.create(req.body).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.update = (req, res) => {
-    forcePowerModel.update().then((datas) => {
+    forcePowerModel.update(req.body, req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }
 
 exports.delete = (req, res) => {
-    forcePowerModel.delete().then((datas) => {
+    forcePowerModel.delete(req.params.id).then((datas) => {
         res.json(datas)
     }).catch((error) => (console.log(error)))
 }

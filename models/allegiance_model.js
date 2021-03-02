@@ -8,7 +8,7 @@ const connection = require("./../database/conn_db")
 exports.getAll = () => {
     return connection.then((conn) => {
         return conn.query(`
-            SELECT fname, lname, race, force_sensitive, name
+            SELECT allegianceid, fname, lname, race, force_sensitive, name
             FROM ALLEGIANCE A
                      INNER JOIN BEING B on A.beingid = B.beingid
                      INNER JOIN FACTION F on A.factionid = F.factionid
@@ -20,7 +20,7 @@ exports.getAll = () => {
 exports.getOne = (id) => {
     return connection.then((conn) => {
         return conn.query(`
-            SELECT fname, lname, race, force_sensitive, name
+            SELECT allegianceid,, fname, lname, race, force_sensitive, name
             FROM ALLEGIANCE A
                      INNER JOIN BEING B on A.beingid = B.beingid
                      INNER JOIN FACTION F on A.factionid = F.factionid
