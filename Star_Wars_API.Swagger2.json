@@ -1,0 +1,1242 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Star Wars API NODE EXPRESS",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/allegiance": {
+      "get": {
+        "summary": "get all allegiance",
+        "tags": [
+          "ALLEGIANCE"
+        ],
+        "operationId": "getallallegiance",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create allegiance",
+        "tags": [
+          "ALLEGIANCE"
+        ],
+        "operationId": "createallegiance",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createallegiancerequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/allegiance/1": {
+      "get": {
+        "summary": "get one allegiance",
+        "tags": [
+          "ALLEGIANCE"
+        ],
+        "operationId": "getoneallegiance",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/allegiance/12": {
+      "post": {
+        "summary": "update allegiance",
+        "tags": [
+          "ALLEGIANCE"
+        ],
+        "operationId": "updateallegiance",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updateallegiancerequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete allegiance",
+        "tags": [
+          "ALLEGIANCE"
+        ],
+        "operationId": "deleteallegiance",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/being": {
+      "get": {
+        "summary": "get ALL being",
+        "tags": [
+          "BEING"
+        ],
+        "operationId": "getALLbeing",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create being",
+        "tags": [
+          "BEING"
+        ],
+        "operationId": "createbeing",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createbeingrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/being/1": {
+      "get": {
+        "summary": "get One being",
+        "tags": [
+          "BEING"
+        ],
+        "operationId": "getOnebeing",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/being/8": {
+      "post": {
+        "summary": "update being",
+        "tags": [
+          "BEING"
+        ],
+        "operationId": "updatebeing",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updatebeingrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "DELETE being",
+        "tags": [
+          "BEING"
+        ],
+        "operationId": "DELETEbeing",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/faction": {
+      "get": {
+        "summary": "get all faction",
+        "tags": [
+          "FACTION"
+        ],
+        "operationId": "getallfaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create faction",
+        "tags": [
+          "FACTION"
+        ],
+        "operationId": "createfaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createfactionrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/faction/14564": {
+      "get": {
+        "summary": "get one faction",
+        "tags": [
+          "FACTION"
+        ],
+        "operationId": "getonefaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/faction/8": {
+      "post": {
+        "summary": "update faction",
+        "tags": [
+          "FACTION"
+        ],
+        "operationId": "updatefaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updatefactionrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete faction",
+        "tags": [
+          "FACTION"
+        ],
+        "operationId": "deletefaction",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/force-power": {
+      "get": {
+        "summary": "get all force-power",
+        "tags": [
+          "FORCE_POWER"
+        ],
+        "operationId": "getallforce-power",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create force-power",
+        "tags": [
+          "FORCE_POWER"
+        ],
+        "operationId": "createforce-power",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createforce-powerrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/force-power/1": {
+      "get": {
+        "summary": "get one force-power",
+        "tags": [
+          "FORCE_POWER"
+        ],
+        "operationId": "getoneforce-power",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/force-power/13": {
+      "post": {
+        "summary": "update force-power",
+        "tags": [
+          "FORCE_POWER"
+        ],
+        "operationId": "updateforce-power",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updateforce-powerrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete force-power",
+        "tags": [
+          "FORCE_POWER"
+        ],
+        "operationId": "deleteforce-power",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/force-user": {
+      "get": {
+        "summary": "get all force-user",
+        "tags": [
+          "FORCE_USER"
+        ],
+        "operationId": "getallforce-user",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create force-user",
+        "tags": [
+          "FORCE_USER"
+        ],
+        "operationId": "createforce-user",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createforce-userrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/force-user/27": {
+      "get": {
+        "summary": "get one force-user",
+        "tags": [
+          "FORCE_USER"
+        ],
+        "operationId": "getoneforce-user",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "update force-user",
+        "tags": [
+          "FORCE_USER"
+        ],
+        "operationId": "updateforce-user",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updateforce-userrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete force-user",
+        "tags": [
+          "FORCE_USER"
+        ],
+        "operationId": "deleteforce-user",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/planet": {
+      "get": {
+        "summary": "get all planet",
+        "tags": [
+          "PLANET"
+        ],
+        "operationId": "getallplanet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create planet",
+        "tags": [
+          "PLANET"
+        ],
+        "operationId": "createplanet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createplanetrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/planet/1": {
+      "get": {
+        "summary": "get one planet",
+        "tags": [
+          "PLANET"
+        ],
+        "operationId": "getoneplanet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/planet/14": {
+      "post": {
+        "summary": "update planet",
+        "tags": [
+          "PLANET"
+        ],
+        "operationId": "updateplanet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updateplanetrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete planet",
+        "tags": [
+          "PLANET"
+        ],
+        "operationId": "deleteplanet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/ship": {
+      "get": {
+        "summary": "get all ship",
+        "tags": [
+          "SHIP"
+        ],
+        "operationId": "getallship",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "summary": "create ship",
+        "tags": [
+          "SHIP"
+        ],
+        "operationId": "createship",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/createshiprequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/ship/1": {
+      "get": {
+        "summary": "get one ship",
+        "tags": [
+          "SHIP"
+        ],
+        "operationId": "getoneship",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/ship/8": {
+      "post": {
+        "summary": "update ship",
+        "tags": [
+          "SHIP"
+        ],
+        "operationId": "updateship",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updateshiprequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete ship",
+        "tags": [
+          "SHIP"
+        ],
+        "operationId": "deleteship",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "createallegiancerequest": {
+      "title": "createallegiancerequest",
+      "example": {
+        "beingid": 1,
+        "factionid": 1
+      },
+      "type": "object",
+      "properties": {
+        "beingid": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "factionid": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "beingid",
+        "factionid"
+      ]
+    },
+    "updateallegiancerequest": {
+      "title": "updateallegiancerequest",
+      "example": {
+        "beingid": 2,
+        "factionid": 2
+      },
+      "type": "object",
+      "properties": {
+        "beingid": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "factionid": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "beingid",
+        "factionid"
+      ]
+    },
+    "createbeingrequest": {
+      "title": "createbeingrequest",
+      "example": {
+        "fname": "test firstname",
+        "lname": "test lastname",
+        "race": "test race",
+        "homeworld": 1,
+        "force": 1
+      },
+      "type": "object",
+      "properties": {
+        "fname": {
+          "type": "string"
+        },
+        "lname": {
+          "type": "string"
+        },
+        "race": {
+          "type": "string"
+        },
+        "homeworld": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "force": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "fname",
+        "lname",
+        "race",
+        "homeworld",
+        "force"
+      ]
+    },
+    "updatebeingrequest": {
+      "title": "updatebeingrequest",
+      "example": {
+        "fname": "test2 firstname",
+        "lname": "test2 lastname",
+        "race": "test2 race",
+        "homeworld": 1,
+        "force": 1
+      },
+      "type": "object",
+      "properties": {
+        "fname": {
+          "type": "string"
+        },
+        "lname": {
+          "type": "string"
+        },
+        "race": {
+          "type": "string"
+        },
+        "homeworld": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "force": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "fname",
+        "lname",
+        "race",
+        "homeworld",
+        "force"
+      ]
+    },
+    "createfactionrequest": {
+      "title": "createfactionrequest",
+      "example": {
+        "name": "test name",
+        "numMembers": 1,
+        "leader": 1
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "numMembers": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "leader": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "numMembers",
+        "leader"
+      ]
+    },
+    "updatefactionrequest": {
+      "title": "updatefactionrequest",
+      "example": {
+        "name": "test2 name",
+        "numMembers": 2,
+        "leader": 2
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "numMembers": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "leader": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "numMembers",
+        "leader"
+      ]
+    },
+    "createforce-powerrequest": {
+      "title": "createforce-powerrequest",
+      "example": {
+        "name": "test name",
+        "lethal": 1
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "lethal": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "lethal"
+      ]
+    },
+    "updateforce-powerrequest": {
+      "title": "updateforce-powerrequest",
+      "example": {
+        "name": "test2 name",
+        "lethal": 2
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "lethal": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "lethal"
+      ]
+    },
+    "createforce-userrequest": {
+      "title": "createforce-userrequest",
+      "example": {
+        "forceid": 1,
+        "beingid": 1
+      },
+      "type": "object",
+      "properties": {
+        "forceid": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "beingid": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "forceid",
+        "beingid"
+      ]
+    },
+    "updateforce-userrequest": {
+      "title": "updateforce-userrequest",
+      "example": {
+        "forceid": 2,
+        "beingid": 2
+      },
+      "type": "object",
+      "properties": {
+        "forceid": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "beingid": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "forceid",
+        "beingid"
+      ]
+    },
+    "createplanetrequest": {
+      "title": "createplanetrequest",
+      "example": {
+        "name": "test name",
+        "population": 0,
+        "owner": 1
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "population": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "owner": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "population",
+        "owner"
+      ]
+    },
+    "updateplanetrequest": {
+      "title": "updateplanetrequest",
+      "example": {
+        "name": "test2 name",
+        "population": 2,
+        "owner": 2
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "population": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "owner": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "population",
+        "owner"
+      ]
+    },
+    "createshiprequest": {
+      "title": "createshiprequest",
+      "example": {
+        "name": "test name",
+        "model": "test model",
+        "make": "test make",
+        "captain": 1,
+        "capacity": 1
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "make": {
+          "type": "string"
+        },
+        "captain": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "capacity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "model",
+        "make",
+        "captain",
+        "capacity"
+      ]
+    },
+    "updateshiprequest": {
+      "title": "updateshiprequest",
+      "example": {
+        "name": "test2 name",
+        "model": "test2 model",
+        "make": "test2 make",
+        "captain": 2,
+        "capacity": 2
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "make": {
+          "type": "string"
+        },
+        "captain": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "capacity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "model",
+        "make",
+        "captain",
+        "capacity"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "ALLEGIANCE"
+    },
+    {
+      "name": "BEING"
+    },
+    {
+      "name": "FACTION"
+    },
+    {
+      "name": "FORCE_POWER"
+    },
+    {
+      "name": "FORCE_USER"
+    },
+    {
+      "name": "PLANET"
+    },
+    {
+      "name": "SHIP"
+    }
+  ]
+}
